@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: galleon-pack-resteasy-microprofile
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: galleon-pack-resteasy-microprofile
+    app.kubernetes.io/part-of: resteasy-microprofile
+  name: galleon-pack-resteasy-microprofile
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: java-quarkus-app
+      app.kubernetes.io/instance: galleon-pack-resteasy-microprofile
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: java-quarkus-app
+        app.kubernetes.io/instance: galleon-pack-resteasy-microprofile
+    spec:
+      containers:
+      - image: java-quarkus-image:latest
+        name: my-java-quarkus
+        ports:
+        - containerPort: 8081
+          name: http
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 10m
+            memory: 100Mi
+status: {}
