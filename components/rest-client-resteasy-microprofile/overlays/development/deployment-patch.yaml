@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: rest-client-resteasy-microprofile
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rh-ee-rnovelli-tenant/resteasy-microprofile/rest-client-resteasy-microprofile@sha256:a6a7356fdc51d773a8392d70e7bec7549b1fd056ee7e1f874eca4cf80f40821a
+        name: my-java-quarkus
+        resources: {}
+status: {}
