@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: testsuite-resteasy-microprofile
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: testsuite-resteasy-microprofile
+    app.kubernetes.io/part-of: resteasy-microprofile
+  name: testsuite-resteasy-microprofile
+spec:
+  ports:
+  - name: http-8081
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app: java-quarkus-app
+    app.kubernetes.io/instance: testsuite-resteasy-microprofile
+status:
+  loadBalancer: {}
