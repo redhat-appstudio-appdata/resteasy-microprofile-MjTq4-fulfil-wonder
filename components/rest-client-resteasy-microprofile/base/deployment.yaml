@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: rest-client-resteasy-microprofile
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-user-workloads/rh-ee-rnovelli-tenant/resteasy-microprofile/rest-client-resteasy-microprofile@sha256:a6a7356fdc51d773a8392d70e7bec7549b1fd056ee7e1f874eca4cf80f40821a
         name: my-java-quarkus
         ports:
         - containerPort: 8081
