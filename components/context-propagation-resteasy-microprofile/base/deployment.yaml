@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: context-propagation-resteasy-microprofile
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-user-workloads/rh-ee-rnovelli-tenant/resteasy-microprofile/context-propagation-resteasy-microprofile@sha256:4a42bf1f38e98904ed16ace49c28c2ee7996d7f765dd72880895c75f262d5752
         name: my-java-quarkus
         ports:
         - containerPort: 8081
