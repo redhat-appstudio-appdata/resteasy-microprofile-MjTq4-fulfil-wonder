@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: config-resteasy-microprofile
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: config-resteasy-microprofile
+    app.kubernetes.io/part-of: resteasy-microprofile
+  name: config-resteasy-microprof3bz7
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: config-resteasy-microprofile
+    weight: null
+status: {}
